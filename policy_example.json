@@ -1,0 +1,23 @@
+{
+    "namespace": "com.example",
+    "types": [
+        {
+            "name": "doc",
+            "relations": [
+                {"name": "owner", "type": "user"},
+                {"name": "viewer", "type": "user"}
+            ],
+            "actions": [
+                {"name": "can_change_owner", "rule": "owner"},
+                {"name": "can_read", "rule": "viewer or owner"},
+                {"name": "can_share", "rule": "owner"},
+                {"name": "can_write", "rule": "owner"}
+            ]
+        },
+        {
+            "name": "user",
+            "relations": [],
+            "actions": []
+        }
+    ]
+}
